@@ -1,0 +1,516 @@
+    1  touch main.tf
+    2  ls
+    3  vi ls
+    4  ls
+    5  vi mai*
+    6  more main
+    7  more *
+    8  vi *
+    9  terraform init
+   10  terraform fmt
+   11  pwd
+   12  touch copper-vertex-323422-1a26d8332847
+   13  ls
+   14  vi co*
+   15  vi main.tf
+   16  ls
+   17  cp co* key.json
+   18  more key.json
+   19  vi main.tf
+   20  terraform fmt
+   21  ls -l
+   22  pwd
+   23  vi main.tf
+   24  rm main.tf
+   25  touch main.tf
+   26  more main.tf
+   27  vi main*
+   28  terraform init
+   29  vi main*
+   30  terraform init
+   31  terraform fmt
+   32  more main.tf
+   33  vi main*
+   34  ls
+   35  terraform fmt
+   36  terraform validate
+   37  vi main*
+   38  terraform validate
+   39  ls
+   40  cat k*
+   41  more k*
+   42  ls
+   43  more co*
+   44  ls
+   45  vi main.tf
+   46  ls
+   47  vi main.tf
+   48  terraform fmt
+   49  more copper*json
+   50  ls
+   51  more copper*json
+   52  terraform fmt
+   53  terraform init
+   54  terraform 
+   55  terraform destroy
+   56  ls
+   57  terraform fmt
+   58  vi main.tf
+   59  ls
+   60  vi main.tf
+   61  ls
+   62  vi main.tf
+   63  terraform init
+   64  terraform fmt
+   65  vi main.tf
+   66  terraform validate
+   67  vi main.tf
+   68  ls
+   69  vi main.tf
+   70  terraform validate
+   71  ls
+   72  vi main.tf
+   73  ls
+   74  vi main.tf
+   75  ls
+   76  vi main.tf
+   77  ls
+   78  terraform validate
+   79  vi main.tf
+   80  terraform validate
+   81  terraform apply
+   82  vi main.tf
+   83  terraform apply
+   84  ls
+   85  PWd
+   86  ls
+   87  cd ci*
+   88  ls
+   89  ./bin/create-project.sh cis-91-terraform secrets/cis-91.key
+   90  ls
+   91  mkdir secrets
+   92  ls
+   93  cd
+   94  ls
+   95  cd l
+   96  cd l*
+   97  ls
+   98  cp c*n ..
+   99  cd
+  100  ls
+  101  mv c*n cis-91/secrets
+  102  cd cis-91/secrets
+  103  pwd
+  104  ls
+  105  cd ..
+  106  pwd
+  107  ./bin/create-project.sh cis-91-terraform secrets/cis-91.key
+  108  s
+  109  ls
+  110  pwd
+  111  ls secrets
+  112  ls
+  113  pwd
+  114  find . -name *main* -print
+  115  cd base
+  116  ls
+  117  vi main.tf
+  118  ls
+  119  cd
+  120  cd cis*
+  121  ls
+  122  ls base
+  123  pwd
+  124  ls
+  125  ls secrets
+  126  find . -name *terra* -print
+  127  ls
+  128  more R*
+  129  ls secrets
+  130  more secrets/cis*
+  131  ls
+  132  ls bin
+  133  find . -name main.tf -print
+  134  cd base
+  135  ls
+  136  vi main
+  137  ls
+  138  vi main*
+  139  pwd
+  140  terraform init
+  141  terraform apply
+  142  cd
+  143  ls
+  144  cd secrets
+  145  ls
+  146  pwd
+  147  cd cis*
+  148  ls
+  149  pwd
+  150  ls
+  151  cd secrets
+  152  ls
+  153  vi ci*
+  154  pwd
+  155  cd ../bin
+  156  ls
+  157  pwd
+  158  ls
+  159  pwd
+  160  cd,,.base
+  161  lss
+  162  cd ..
+  163  pwd
+  164  cd base
+  165  pwd
+  166  ls
+  167  vi main.tf
+  168  cis-91-terraform-326400
+  169  vi main.tf
+  170  pwdterraform apply
+  171  pwd
+  172  terraform apply
+  173  gcloud compute config-ssh --remove
+  174  gcloud compute config-ssh
+  175  terraform apply
+  176  pwd
+  177  ls
+  178  cd le*
+  179  ls
+  180  terraform apply
+  181  python3 cis-91/bin/yaml-check.py
+  182  ls
+  183  python3 cis-91/bin/yaml-check.py
+  184  ls
+  185  python3 cis-91/bin/yaml-check.py
+  186  hello: world
+  187  python3 cis-91/bin/yaml-check.py
+  188  cd ci*
+  189  pwd
+  190  ls
+  191  cd bin
+  192  ls
+  193  python3 yaml-check.py
+  194  more yam*
+  195  vi yam*
+  196  more yam*
+  197  python3 yaml-check.py apple orange banana pear
+  198  ls
+  199  vi *y
+  200  python3 yaml-check.py
+  201  more *y
+  202  vi *y
+  203  python3 yaml-check.py
+  204  vi *y
+  205  python3 yaml-check.py
+  206  mv y*y t
+  207  cp t yaml-check.py
+  208  vi *y
+  209  cp t yaml-check.py
+  210  vi *y
+  211  python3 yaml-check.py
+  212  pwd
+  213  vi contact.yaml
+  214  ls
+  215  python3 yaml-check.py < co*
+  216  more co*
+  217  vi contact.yaml
+  218  python3 yaml-check.py < co*
+  219  vi contact.yaml
+  220  python3 yaml-check.py < co*
+  221  ls
+  222  python3 yaml-check.py < contact.yaml
+  223  vi contact.yaml
+  224  python3 yaml-check.py < contact.yaml
+  225  vi contact.yaml
+  226  python3 yaml-check.py < contact.yaml
+  227  vi ya*
+  228  more ya*y
+  229  python3 yaml-check.py < contact.yaml
+  230  pwd
+  231  ls
+  232  python3 yaml-check.py < contact.yaml
+  233  pwd
+  234  ls
+  235  cd cd*
+  236  pwd
+  237  ls
+  238  cd ci*
+  239  pwd
+  240  555-1212'}}}
+  241  sdc_stevex@cloudshell:~/cis-91/bin (copper-vertex-323422)$
+  242  pip3 install --upgrade pip
+  243  pip3 install ansible requests google-auth
+  244  vi inventory.gcp.yaml
+  245  dbase
+  246  pwd
+  247  ls
+  248  cd base
+  249  pwd
+  250  ansible-playbook -i ../inventory.gcp.yaml --private-key ~/.ssh/google_compute_engine playbook.yaml 
+  251  pwd
+  252  ansible-playbook -i ../inventory.gcp.yaml --private-key ~/.ssh/google_compute_engine playbook.yaml 
+  253  cd..
+  254  pwd
+  255  cd ..
+  256  pwd
+  257  ansible-playbook -i ../inventory.gcp.yaml --private-key ~/.ssh/google_compute_engine playbook.yaml 
+  258  which ansible-playbook
+  259  pwd
+  260  ls
+  261  ls se*
+  262  cd secrets
+  263  ls
+  264  diff *
+  265  ls
+  266  diff * > more
+  267  more more
+  268  rm more
+  269  ls /etc/roles
+  270  ls /etc
+  271  which ansible
+  272  pip3 install ansible requests google-auth
+  273  ansible-playbook -i ../inventory.gcp.yaml --private-key ~/.ssh/google_compute_engine playbook.yaml 
+  274  pwd
+  275  cd ../base
+  276  pwd
+  277  ansible-playbook -i ../inventory.gcp.yaml --private-key ~/.ssh/google_compute_engine playbook.yaml 
+  278  pwd
+  279  ls
+  280  ansible-playbook -i ../inventory.gcp.yaml --private-key ~/.ssh/google_compute_engine playbook.yaml pip3 install ansible requests google-auth
+  281  pip3 install --upgrade pip 
+  282  pip3 install ansible requests google-auth
+  283  ls
+  284  cd c*
+  285  more *
+  286  ls
+  287  pwd
+  288  ls
+  289  pwd
+  290  ls
+  291  more i*
+  292  vi i*
+  293  pwd
+  294  cd base
+  295  ansible-playbook -i ../inventory.gcp.yaml --private-key ~/.ssh/google_compute_engine playbook.yaml 
+  296  ansible-playbook -i ../inventory.gcp.yaml --private-key ~/.ssh/google_compute_engine playbook.yaml >t
+  297  more t
+  298  ansible-playbook -i ../inventory.gcp.yaml --private-key ~/.ssh/google_compute_engine playbook.yaml >t|more
+  299  more t
+  300  pwd
+  301  ls
+  302  ls ..
+  303  ansible-playbook -i ../inventory.gcp.yaml --private-key ~/.ssh/google_compute_engine playbook.yaml >t|more
+  304  pwd
+  305  cd cd\i*
+  306  pwd
+  307  ls
+  308  c ci*
+  309  pwd
+  310  ls
+  311  cd ci*
+  312  pwd
+  313  ls
+  314  cd base
+  315  pwd
+  316  ls
+  317  /google_compute_engine playbook.yaml 
+  318  ls
+  319  ls ..
+  320  ls
+  321  ansible-playbook -i ../inventory.gcp.yaml --private-key ~/.ssh/google_compute_engine playbook.yaml 
+  322  pwd
+  323  cd ..
+  324  ls
+  325  pwd
+  326  cd base
+  327  ls
+  328  more p*
+  329  ls
+  330  terraform apply
+  331  pwd
+  332  ls
+  333  cd cis*
+  334  pwd
+  335  terraform apply
+  336  cd base
+  337  terraform apply
+  338  ssh-keygen -t rsa
+  339  pwd
+  340  cd ..
+  341  ssh 34.136.48.110 -i ~/.ssh/google_compute_engine
+  342  ls
+  343  pwd
+  344  ansible-playbook -i ../inventory.gcp.yaml --private-key ~/.ssh/google_compute_engine playbook.yaml 
+  345  pwd
+  346  cd base
+  347  ansible-playbook -i ../inventory.gcp.yaml --private-key ~/.ssh/google_compute_engine playbook.yaml 
+  348  cd base
+  349  cd
+  350  cd base
+  351  pwd
+  352  cd ci*
+  353  ls
+  354  vi inve*
+  355  more i*
+  356  vi inve*
+  357  pwd
+  358  cd base
+  359  ansible-playbook -i ../inventory.gcp.yaml --private-key ~/.ssh/google_compute_engine playbook.yaml 
+  360  g
+  361  pwd
+  362  cd ..
+  363  more i*
+  364  pwd
+  365  ls
+  366  more i*
+  367  pwd
+  368  cd base
+  369  ansible-playbook -i ../inventory.gcp.yaml --private-key ~/.ssh/google_compute_engine playbook.yaml 
+  370  pwd
+  371  more ../i*
+  372  vi ../i*
+  373  pwd
+  374  ansible-playbook -i ../inventory.gcp.yaml --private-key ~/.ssh/google_compute_engine playbook.yaml 
+  375  more ../i*
+  376  cd ..
+  377  mv t i*
+  378  ls
+  379  more i*
+  380  cd ..
+  381  vi ../i*
+  382  pwd
+  383  c ci*
+  384  vi ../i*
+  385  ls
+  386  cd ci*
+  387  ls
+  388  i i*
+  389  vi i*
+  390  cd base
+  391  ansible-playbook -i ../inventory.gcp.yaml --private-key ~/.ssh/google_compute_engine playbook.yaml 
+  392  terraform destroy
+  393  ls
+  394  pwd
+  395  ansible-playbook -i ../inventory.gcp.yaml --private-key ~/.ssh/google_compute_engine playbook.yaml 
+  396  pwd
+  397  ls
+  398  cd cis*
+  399  pwd
+  400  cd base
+  401  ls
+  402  pwd
+  403  ansible-playbook -i ../inventory.gcp.yaml --private-key ~/.ssh/google_compute_engine playbook.yaml 
+  404  cd ci*
+  405  cd base
+  406  pwd
+  407  history
+  408  history { more
+  409  history | more
+  410  ls
+  411  cd cis*
+  412  cd base
+  413  terraform fmt
+  414  ansible-playbook -i ../inventory.gcp.yaml --private-kay ~/.ssh/google_compute_engine playbook.yaml
+  415  pwd
+  416  cd cdI/base
+  417  pwd
+  418  cd ci*
+  419  cd base
+  420  pwd
+  421  ansible-playbook -i ../inventory.gcp.yaml --private-kay ~/.ssh/google_compute_engine playbook.yaml
+  422  pwd
+  423  ansible-playbook -i ../inventory.gcp.yaml --private-key ~/.ssh/google_compute_engine playbook.yaml
+  424  vi ../inve*
+  425  cd ,,
+  426  pwd
+  427  cd ..
+  428  ls
+  429  vi inve*
+  430  pwd
+  431  ci*/base
+  432  ls
+  433  cd cis*
+  434  pwd
+  435  cd base
+  436  ls
+  437  ansible-playbook -i ../inventory.gcp.yaml --private-key ~/.ssh/google_compute_engine playbook.yaml 
+  438  yerraform apply
+  439  terraform apply
+  440  ansible-playbook -i ../inventory.gcp.yaml --private-key ~/.ssh/google_compute_engine playbook.yaml 
+  441  gcloud compute config-ssh --remove
+  442  gcloud compute config-ssh
+  443  ansible-playbook -i ../inventory.gcp.yaml --private-key ~/.ssh/google_compute_engine playbook.yaml 
+  444  terraform destroy
+  445  terraform apply
+  446  cd cis*
+  447  cd base
+  448  pwd
+  449  terraform apply
+  450  ssh -i ~/.ssh/google_compute_engine
+  451  apt
+  452  sudo apt update
+  453  apt search
+  454  ssh 34.136.48.110 -i ~/.ssh/google_compute_engine
+  455  terraform output
+  456  ssh -i ~/.ssh/google_compute_engine 34.136.48.110
+  457  cd cis*
+  458  ls
+  459  cd base
+  460  ls
+  461  cd..
+  462  ls
+  463  cd ci*
+  464  ls
+  465  cd base
+  466  ls
+  467  more ma*
+  468  pwd
+  469  cd ,,
+  470  cd ..
+  471  pwd
+  472  cd
+  473  pwd
+  474  git clone https://github.com/mike-matera/cis-91.git
+  475  pwd
+  476  cd cis*
+  477  ls
+  478  cd hello-nodejs
+  479  ls
+  480  node app.js
+  481  cd ..
+  482  ls
+  483  cd base
+  484  ls
+  485  vi man.tf
+  486  pwd
+  487  ls
+  488  vi main.tg
+  489  pwd
+  490  vi main.tf
+  491  terraform apply
+  492  ssh -i ~/.ssh/google_compute_engine 35.224.58.141
+  493  exi
+  494  exit
+  495  jobs
+  496  kill %1
+  497  jobs
+  498  g
+  499  logout
+  500  pwd
+  501  ssh -i ~/.ssh/google_compute_engine 35.224.58.141
+  502  kill %1
+  503  ps
+  504  help
+  505  terraform apply
+  506  ls
+  507  cd ci*
+  508  pwd
+  509  terraform apply
+  510  terraform init
+  511  cd base
+  512  terraform init
+  513  terraform apply
+  514  ssh -i ~/.ssh/google_compute_engine 34.122.50.102
+  515  ls
+  516  history > t
