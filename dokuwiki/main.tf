@@ -35,26 +35,9 @@ resource "google_compute_network" "vpc_network" {
   name = "cis91-network"
 }
 
-
-resource "google_service_account" "proj1-service-account" {
-  account_id   = "proj1-service-account"
-  display_name = "proj1-service-account"
-  description  = "Service account for project1"
-}
-
-resource "google_project_iam_member" "project_member" {
-  role   = "roles/editor"
-  member = "serviceAccount:${google_service_account.proj1-service-account.email}"
-}
-
 resource "google_compute_instance" "vm_instance" {
   name         = "cis91"
   machine_type = "e2-micro"
-
-  service_account {
-    email  = google_service_account.proj1-service-account.email
-    scopes = ["cloud-platform"]
-  }
 
   boot_disk {
     initialize_params {
@@ -69,12 +52,6 @@ resource "google_compute_instance" "vm_instance" {
   }
 }
 
-
-output "external-ip" {
-  value = google_compute_instance.vm_instance.network_interface[0].access_config[0].nat_ip
-}
-
-
 resource "google_compute_firewall" "default-firewall" {
   name    = "default-firewall"
   network = google_compute_network.vpc_network.name
@@ -85,5 +62,6 @@ resource "google_compute_firewall" "default-firewall" {
   source_ranges = ["0.0.0.0/0"]
 }
 
-
-
+output "external-ip" {
+  value = google_compute_instance.vm_instance.network_interface[0].access_config[0].nat_ip
+}
