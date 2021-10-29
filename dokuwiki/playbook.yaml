@@ -14,19 +14,15 @@
           - php
           - php-xml
           - nodejs
-    - name: Copy file with owner and permissions
-      ansible.builtin.copy:
-        src: index.html
-        dest: /var/www/html/index.html
-        owner: www-data
-        group: www-data
-        mode: '0644'
     - name: Extract dokuwiki to /var/www/html
       ansible.builtin.unarchive:
         src: https://download.dokuwiki.org/src/dokuwiki/dokuwiki-stable.tgz
         dest: /var/www/html
         remote_src: yes
-    - name: Create an ext4 filesystem on /dev/disk/by-id/google-system
+        extra_opts: [--strip-components=1]
+    - name: Install dokuwiki
+      command: php /var/www/html/install.php
+    - name: Create an ext4 filesystßem on /dev/disk/by-id/google-system
       community.general.filesystem:
         fstype: ext4
         dev: /dev/disk/by-id/google-system
@@ -58,7 +54,7 @@
           state: present
     - name: copy backup script to /etc/cron.hourly/backup
       ansible.builtin.copy:
-        src: /etc/foo.conf
-        dest: /etc/cron.hourly/backup
+        src: ~/cis-91/dokuwiki/backup_script.sh
+        dest: /etc/cron.hourly/backup_script.sh
     
 
