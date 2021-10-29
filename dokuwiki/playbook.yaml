@@ -27,15 +27,10 @@
         path: /system
         state: directory
         mode: '0644'
-    - name: Create directory /var/www/html
-      file:
-        path: /var/www/html
-        state: directory
-        mode: '0644'
     - name: Mount attached disk
       ansible.posix.mount:
           fstype: ext4
-          path: /dev/disk/by-id/google-data/var/www
+          path: /dev/disk/by-id/google-data/
           src: /dev/disk/by-id/google-data
           state: present
     - name: Mount attached disk
@@ -44,7 +39,12 @@
           path: /system
           src: /dev/disk/by-id/google-system
           state: present
-    - name: Extract dokuwiki to /var/www/html
+    - name: Create directory /dev/disk/by-id/google-data/var/www/html
+      file:
+        path: /dev/disk/by-id/google-data/var/www/html
+        state: directory
+        mode: '0644'
+    - name: Extract dokuwiki to /dev/disk/by-id/google-data/var/www/html
       ansible.builtin.unarchive:
         src: https://download.dokuwiki.org/src/dokuwiki/dokuwiki-stable.tgz
         dest: /dev/disk/by-id/google-data/var/www/html
