@@ -13,7 +13,14 @@
           - apache2
           - php
           - php-xml
-          - nodejs
+    - name: Copy file with owner and permissions
+      ansible.builtin.copy:
+        src: index.html
+        dest: /var/www/html/index.html
+        owner: www-data
+        group: www-data
+        mode: '0644'
+        #owner: /        
     - name: Create an ext4 filesystem on /dev/disk/by-id/google-system
       community.general.filesystem:
         fstype: ext4
