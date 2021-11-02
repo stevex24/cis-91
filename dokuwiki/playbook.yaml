@@ -13,14 +13,7 @@
           - apache2
           - php
           - php-xml
-    - name: Copy file with owner and permissions
-      ansible.builtin.copy:
-        src: index.html
-        dest: /var/www/html/index.html
-        owner: www-data
-        group: www-data
-        mode: '0644'
-        #owner: /        
+    - name: Copy file with owner and permissions   
     - name: Create an ext4 filesystem on /dev/disk/by-id/google-system
       community.general.filesystem:
         fstype: ext4
@@ -56,6 +49,8 @@
         src: https://download.dokuwiki.org/src/dokuwiki/dokuwiki-stable.tgz
         dest: /var/www/html
         remote_src: yes
+        owner: root
+        mode: '1777'
         extra_opts: [--strip-components=1]
     - name: copy backup script to /etc/cron.hourly/backup
       ansible.builtin.copy:
