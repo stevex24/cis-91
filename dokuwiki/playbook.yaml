@@ -34,6 +34,11 @@
         owner: root
         mode: '1777'
         extra_opts: [--strip-components=1]
+    - name: Delete file /var/www/html/index.html
+      ansible.builtin.file:
+        path: /var/www/html/index.html
+        mode: '0644'
+        state: absent
     - name: set permissions on /var/www/html/lib dir according to dokuwiki doc
       file:
         path: var/www/html/lib
