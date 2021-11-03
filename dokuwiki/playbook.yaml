@@ -21,11 +21,6 @@
       community.general.filesystem:
         fstype: ext4
         dev: /dev/disk/by-id/google-data
-    - name: Create directory /system
-      file:
-        path: /system
-        state: directory
-        mode: '0644'
     - name: Create directory/var/www/html
       file:
         path: /var/www/html
@@ -39,11 +34,12 @@
         owner: root
         mode: '1777'
         extra_opts: [--strip-components=1]
-    - name: Delete file index.html
+    - name: set permissions on /var/www/html/lib dir according to dokuwiki doc
       file:
-        path: var/www/html/index.html
-        mode: '0444'
-        state: absent
+        path: var/www/html/lib
+        mode: '0755'
+        state: directory
+        recurse: yes
     - name: Mount attached disk
       ansible.posix.mount:
           fstype: ext4
