@@ -13,7 +13,6 @@
           - apache2
           - php
           - php-xml
-    - name: Copy file with owner and permissions   
     - name: Create an ext4 filesystem on /dev/disk/by-id/google-system
       community.general.filesystem:
         fstype: ext4
@@ -27,18 +26,6 @@
         path: /system
         state: directory
         mode: '0644'
-    - name: Mount attached disk
-      ansible.posix.mount:
-          fstype: ext4
-          path: /var/www
-          src: /dev/disk/by-id/google-data
-          state: present
-    - name: Mount attached disk
-      ansible.posix.mount:
-          fstype: ext4
-          path: /system
-          src: /dev/disk/by-id/google-system
-          state: present
     - name: Create directory/var/www/html
       file:
         path: /var/www/html
@@ -52,6 +39,23 @@
         owner: root
         mode: '1777'
         extra_opts: [--strip-components=1]
+    - name: Delete file index.html
+      file:
+        path: var/www/html/index.html
+        mode: '0444'
+        state: absent
+    - name: Mount attached disk
+      ansible.posix.mount:
+          fstype: ext4
+          path: /var/www
+          src: /dev/disk/by-id/google-data
+          state: present
+    - name: Mount attached disk
+      ansible.posix.mount:
+          fstype: ext4
+          path: /system
+          src: /dev/disk/by-id/google-system
+          state: present
     - name: copy backup script to /etc/cron.hourly/backup
       ansible.builtin.copy:
         src: ~/cis-91/dokuwiki/backup_script.sh
