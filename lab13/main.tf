@@ -62,21 +62,9 @@ resource "google_compute_firewall" "default-firewall" {
   network = google_compute_network.vpc_network.name
   allow {
     protocol = "tcp"
-    ports = ["22","80"]
+    ports = ["22", "80"]
   }
   source_ranges = ["0.0.0.0/0"]
-}
-
-resource "google_compute_instance_group" "webservers" {
-  name        = "cis91-webservers"
-  description = "Webserver instance group"
-
-  instances = google_compute_instance.webservers[*].self_link
-
-  named_port {
-    name = "http"
-    port = "80"
-  }
 }
 
 resource "google_compute_health_check" "webservers" {
@@ -90,6 +78,17 @@ resource "google_compute_health_check" "webservers" {
   }
 }
 
+resource "google_compute_instance_group" "webservers" {
+  name        = "cis91-webservers"
+  description = "Webserver instance group"
+
+  instances = google_compute_instance.webservers[*].self_link
+
+  named_port {
+    name = "http"
+    port = "80"
+  }
+}
 
 resource "google_compute_backend_service" "webservice" {
   name      = "web-service"
@@ -105,7 +104,6 @@ resource "google_compute_backend_service" "webservice" {
   ]
 }
 
-
 resource "google_compute_url_map" "default" {
   name            = "my-site"
   default_service = google_compute_backend_service.webservice.id
@@ -120,7 +118,6 @@ resource "google_compute_global_address" "default" {
   name = "external-address"
 }
 
-#Global
 resource "google_compute_global_forwarding_rule" "default" {
   name                  = "forward-application"
   ip_protocol           = "TCP"
@@ -130,11 +127,10 @@ resource "google_compute_global_forwarding_rule" "default" {
   ip_address            = google_compute_global_address.default.address
 }
 
+output "external-ip" {
+  value = google_compute_instance.webservers[*].network_interface[0].access_config[0].nat_ip
+}
 
 output "lb-ip" {
   value = google_compute_global_address.default.address
-}
-
-output "external-ip" {
-  value = google_compute_instance.webservers[*].network_interface[0].access_config[0].nat_ip
 }
