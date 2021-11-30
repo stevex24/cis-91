@@ -11,7 +11,26 @@
           - python3-pip 
           - python3-venv
           - nodejs
-- name: Add user account 
-  ansible.builtin.user:
-    name: nodeuser
-    system: true
+    - name: Add user account 
+      ansible.builtin.user:
+        name: nodeuser
+        system: true
+    - name: Git systemd service directory
+      ansible.builtin.git:
+        repo: 'https://github.com/stevex24/cis-91.git'
+        dest: /lib/systemd/system/node_app.service
+        clone: yes
+    - name: copy to vm from cloud shell
+      ansible.builtin.copy:
+        src:  node_app.service
+        dest: /lib/systemd/system/node_app.service
+        owner: nodeuser
+        mode: '0644'
+    - name: copy to app.js from ../hello-nodejs in cloudshell to nodueser in vm
+      ansible.builtin.copy:
+        src:  ../hello-nodejs/app.js
+        dest: /home/nodeuser
+        owner: nodeuser
+        mode: '0644'
+    
+    
