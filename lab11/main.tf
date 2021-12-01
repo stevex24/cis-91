@@ -4,7 +4,7 @@ variable "credentials_file" {
 }
 
 variable "project" {
-  default = "your-project-here"
+  default = "cis-91-terraform-326400"
 }
 
 variable "region" {
@@ -31,14 +31,14 @@ provider "google" {
   project = var.project
 }
 
-resource "google_compute_network" "custom_network" {
-  name                    = "custom_network"
+resource "google_compute_network" "custom-network" {
+  name                    = "custom-network"
   auto_create_subnetworks = false
 }
 
-resource "google_compute_subnetwork" "network-with-private-secondary-ip-ranges" {
-  name          = "subnet 1"
-  ip_cidr_range = "10.2.0.0/16"
+resource "google_compute_subnetwork" "network-with-private-secondary-ip-ranges_1" {
+  name          = "subnet-1"
+  ip_cidr_range = "10.240.0.0/24"
   region        = "us-central1"
   network       = google_compute_network.custom-network.id
   secondary_ip_range {
@@ -47,25 +47,25 @@ resource "google_compute_subnetwork" "network-with-private-secondary-ip-ranges" 
   }
 }
 
-resource "google_compute_subnetwork" "network-with-private-secondary-ip-ranges" {
-  name          = "subnet 2"
-  ip_cidr_range = "10.2.0.0/16"
+resource "google_compute_subnetwork" "network-with-private-secondary-ip-ranges-2" {
+  name          = "subnet-2"
+  ip_cidr_range = "192.168.1.0/24"
   region        = "us-central1"
   network       = google_compute_network.custom-network.id
   secondary_ip_range {
     range_name    = "seondary-range-2"
-    ip_cidr_range = "192.168.10.0/24"
+    ip_cidr_range = "192.169.10.0/24"
   }
 }
 
-resource "google_compute_subnetwork" "network-with-private-secondary-ip-ranges" {
-  name          = "subnet 3"
+resource "google_compute_subnetwork" "network-with-private-secondary-ip-ranges-3" {
+  name          = "subnet-3"
   ip_cidr_range = "10.2.0.0/16"
   region        = "us-central1"
   network       = google_compute_network.custom-network.id
   secondary_ip_range {
     range_name    = "seondary-range-3"
-    ip_cidr_range = "192.168.10.0/24"
+    ip_cidr_range = "192.170.10.0/24"
   }
 }
 
@@ -80,7 +80,7 @@ resource "google_compute_instance" "vm_instance" {
   }
 
   network_interface {
-    network = google_compute_network.vpc_network.name
+    network       = google_compute_network.custom-network.id
     access_config {
     }
   }
@@ -88,7 +88,7 @@ resource "google_compute_instance" "vm_instance" {
 
 resource "google_compute_firewall" "default-firewall" {
   name = "default-firewall"
-  network = google_compute_network.vpc_network.name
+  network       = google_compute_network.custom-network.id
   allow {
     protocol = "tcp"
     ports = ["22"]
