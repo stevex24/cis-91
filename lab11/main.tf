@@ -83,6 +83,7 @@ resource "google_compute_instance" "vm_instance" {
     network       = google_compute_network.custom-network.id
     access_config {
     }
+    subnetwork = google_compute_subnetwork.network-with-private-secondary-ip-ranges-3.name
   }
 }
 
